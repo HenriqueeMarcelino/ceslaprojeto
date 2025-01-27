@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+ion-input {
+  --background: #FFF2F3;
+  --color: rgb(26, 26, 26);
+  --border-width: 0px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+ion-input:focus-within {
+  --border-width: 2px; 
+  --border-color: #F45220; 
+  --highlight-color: #F45220; 
+}
+
+.t-center{
+  text-align: center;
+}
+
+.logo{
+  width: 50%;
+  margin-bottom: 15px;
+}

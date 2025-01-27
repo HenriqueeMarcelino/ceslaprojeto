@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true">
+  <div class="container t-center">
+    <img class="logo" src="assets/boneco.png">
+
+    <h1>Autentique-se</h1>
+    <p>Realize o login para acessar as melhores funcionalidades do aplicativo.</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <ion-input
+        label="E-mail"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Digite seu e-mail"
+        formControlName="email">
+      </ion-input>
+      <ion-text color="danger" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+        O e-mail é obrigatório e deve ser válido.
+      </ion-text>
+
+      <ion-input
+       class="mt-20"
+        label="Senha"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Digite sua senha"
+        type="password"
+        formControlName="password">
+      </ion-input>
+      <ion-text color="danger" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        A senha é obrigatória.
+      </ion-text>
+
+      <ion-button
+        class="btn-login"
+        expand="block"
+        type="submit"
+        [disabled]="loginForm.invalid">
+        Entrar
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

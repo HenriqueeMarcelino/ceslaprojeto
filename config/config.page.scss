@@ -1,0 +1,47 @@
+.header-curved {
+    position: relative;
+    background: linear-gradient(135deg, #f45220, #ff9f81);
+    height: 220px;
+    border-bottom-left-radius: 50% 40px;
+    border-bottom-right-radius: 50% 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.avatar-icon {
+    font-size: 120px;
+}
+
+.profile-name {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu-list {
+    margin-top: 40px;
+}
+
+.menu-list ion-item {
+    --background: white;
+    --border-radius: 8px;
+    margin: 10px 20px;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-item ion-icon {
+    color: #f45220;
+    font-size: 28px;
+}

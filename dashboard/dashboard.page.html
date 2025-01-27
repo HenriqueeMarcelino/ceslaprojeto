@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="dashboard-content"> 
+  <div class="container">
+    <div class="header">
+      <h1>Dashboard</h1>
+      <ion-icon name="notifications-outline" class="notification-icon"></ion-icon>
+    </div>
+
+    <div class="welcome-message">
+      <ion-card class="welcome-card">
+        <ion-card-content>
+          <h2>Bem vindo, Cesla</h2>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="dashboard-section">
+      <h2>Nossos Números:</h2>
+      <div class="card-container">
+        <ion-card *ngFor="let data of dashboardData" class="dashboard-card">
+          <ion-card-header>
+            <ion-card-title class="title">{{ data.title }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="value">{{ data.value }}</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+      <h2>Nossos Projetos:</h2>
+      <ion-list>
+        <ion-item *ngFor="let project of projects">
+          <ion-icon slot="start" name="construct-outline"></ion-icon>
+          <ion-label>
+            <h3>{{ project.projectName }}</h3>
+            <p>{{ project.type }} - Conclusão: {{ project.completionDate | date:'dd/MM/yyyy' }}</p>
+          </ion-label>
+          <ion-badge color="primary" slot="end">Novo</ion-badge>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
